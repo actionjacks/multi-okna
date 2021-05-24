@@ -18,8 +18,8 @@ export default [
   {
     right: [
       {
-        url: "/poradnik",
-        name: "Poradnik",
+        url: "/nasze-realizacje",
+        name: "Nasze Realizacje",
       },
       {
         url: "/realizacje",

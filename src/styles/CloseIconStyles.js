@@ -8,5 +8,6 @@ export default {
     left: "-20px",
     color: "white",
     marginTop: "20px",
+    userSelect: "none",
   },
 };

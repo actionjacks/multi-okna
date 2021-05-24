@@ -9,13 +9,13 @@ function App() {
       id="outer-container"
       style={{ height: "200vh", overflow: "hidden" }}
     >
-      {/* <NavbarMobile
+      <NavbarMobile
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
       />
       <div id="page-wrap">
         <Navbar />
-      </div> */}
+      </div>
       <Routes />
     </div>
   );

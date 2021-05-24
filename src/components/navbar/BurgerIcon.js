@@ -1,7 +1,7 @@
 import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
-import "../../styles/BurgerIcon.css";
+import "./BurgerIcon.css";
 import styles from "../../styles/BurgerIconStyles";
 
 function BurgerIcon({ classes, toggleMenu, menuOpen }) {

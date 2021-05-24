@@ -12,7 +12,7 @@ import CloseIcon from "./CloseIcon";
 
 import styles from "../../styles/NavbarMobileStyles";
 // disable scroll-bar in sidebar container
-import "../../styles/Navbar.css";
+import "./Navbar.css";
 
 function NavbarMobile({ classes, pageWrapId, outerContainerId }) {
   const [menuOpen, setMenuOpen] = useState(false);

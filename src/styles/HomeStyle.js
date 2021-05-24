@@ -1,10 +1,8 @@
 import sizes from "../styles/BreakPoints";
 
 export default {
-  logo: {
-    objectFit: "cover",
-    height: "300px",
-    width: "100%",
+  home: {
+    border: "1px solid gray",
   },
   line: {
     // borderBottom: "1px solid black",

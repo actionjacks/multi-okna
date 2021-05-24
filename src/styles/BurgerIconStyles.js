@@ -11,6 +11,7 @@ export default {
     transition: "0.5s ease",
     height: "50px",
     width: "35px",
+    userSelect: "none",
 
     [sizes.up("md")]: {
       display: "none",

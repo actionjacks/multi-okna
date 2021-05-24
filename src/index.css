@@ -1,7 +1,10 @@
+#root {
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 
   font-family: "Open Sans Condensed", sans-serif;
   /* font-family: 'Oswald', sans-serif; */
