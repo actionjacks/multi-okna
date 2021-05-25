@@ -1,13 +1,24 @@
 import sizes from "../styles/BreakPoints";
 
 export default {
-  home: {
-    border: "1px solid gray",
-  },
-  line: {
-    // borderBottom: "1px solid black",
+  home: {},
+  products: {
+    display: "flex",
     width: "100%",
-    height: "2px",
-    boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+    backgroundColor: "gray",
+  },
+  productLeft: {
+    display: "flex",
+    flex: 1,
+    width: "100%",
+    padding: "0 5px",
+  },
+  productRight: {
+    display: "flex",
+    flexWrap: "wrap",
+    flexDirectio: "column",
+    flex: 0.8,
+    padding: "0 5px",
+    justifyContent: "space-between",
   },
 };

@@ -4,11 +4,7 @@ import Routes from "./routes";
 
 function App() {
   return (
-    <div
-      className="App"
-      id="outer-container"
-      style={{ height: "200vh", overflow: "hidden" }}
-    >
+    <div className="App" id="outer-container" style={{ overflow: "hidden" }}>
       <NavbarMobile
         pageWrapId={"page-wrap"}
         outerContainerId={"outer-container"}
