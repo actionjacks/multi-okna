@@ -4,21 +4,34 @@ export default {
   home: {},
   products: {
     display: "flex",
-    width: "100%",
     backgroundColor: "gray",
+    padding: "5px",
+
+    [sizes.down("md")]: {
+      display: "block",
+      padding: "10px",
+    },
   },
   productLeft: {
     display: "flex",
     flex: 1,
     width: "100%",
-    padding: "0 5px",
+
+    [sizes.down("md")]: {
+      width: "80%",
+      margin: "auto",
+    },
   },
   productRight: {
     display: "flex",
     flexWrap: "wrap",
-    flexDirectio: "column",
     flex: 0.8,
-    padding: "0 5px",
+    width: "100%",
     justifyContent: "space-between",
+
+    [sizes.down("md")]: {
+      width: "80%",
+      margin: "auto",
+    },
   },
 };
