@@ -24,6 +24,16 @@ function Home({ classes }) {
           <ProductBox name="Okna" />
         </div>
       </div>
+      <div>
+        <h2>Szanowny Inwestorze.</h2>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+          in blanditiis quia dolore itaque amet quo commodi quos a aperiam? Hic
+          error quo necessitatibus nemo laboriosam odio tempora eveniet fuga?
+        </p>
+        <button>umów się na spotkanie</button>
+      </div>
+      <Slider />
       <Map />
       <Footer />
     </div>
