@@ -8,7 +8,7 @@ import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import ForwardIcon from "@material-ui/icons/Forward";
 
-import styles from "../styles/FooterStyle";
+import styles from "./FooterStyle";
 
 function Footer({ classes }) {
   const handleClick = () => {

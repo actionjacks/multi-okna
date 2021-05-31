@@ -1,11 +1,10 @@
 import React from "react";
 import Slider from "./Slider";
-import Footer from "../Footer";
 import ProductBox from "./ProductBox";
 
 import { withStyles } from "@material-ui/core/styles";
 
-import styles from "../../styles/HomeStyle";
+import styles from "./styles/HomeStyle";
 import Map from "./Map";
 
 function Home({ classes }) {
@@ -35,7 +34,6 @@ function Home({ classes }) {
       </div>
       <Slider />
       <Map />
-      <Footer />
     </div>
   );
 }

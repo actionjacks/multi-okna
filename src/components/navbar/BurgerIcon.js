@@ -1,8 +1,8 @@
 import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
-import "./BurgerIcon.css";
-import styles from "../../styles/BurgerIconStyles";
+import "./styles/BurgerIcon.css";
+import styles from "./styles/BurgerIconStyles";
 
 function BurgerIcon({ classes, toggleMenu, menuOpen }) {
   let backgroundColor = `${menuOpen ? "white" : "black"}`;

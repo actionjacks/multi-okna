@@ -1,5 +1,6 @@
 import NavbarMobile from "./components/navbar/NavbarMobile";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/Footer";
 import Routes from "./routes";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
       </div>
       <Routes />
+      <Footer />
     </div>
   );
 }

@@ -8,7 +8,7 @@ import "swiper/components/scrollbar/scrollbar.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
-import "./SliderStyles.css";
+import "./styles/SliderStyles.css";
 
 // import Swiper core and required modules
 import SwiperCore, {

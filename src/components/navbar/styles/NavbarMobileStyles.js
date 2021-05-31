@@ -1,4 +1,4 @@
-import sizes from "../styles/BreakPoints";
+import sizes from "../../../styles/BreakPoints";
 
 const styles = {
   /* Position and sizing of burger button */

@@ -5,7 +5,7 @@ import { NavLink, Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 import { withStyles } from "@material-ui/core/styles";
-import styles from "../../styles/NavbarStyles";
+import styles from "./styles/NavbarStyles";
 
 function Navbar({ classes }) {
   const [show, handleShow] = useState(false);
@@ -16,7 +16,7 @@ function Navbar({ classes }) {
         handleShow(true);
       } else handleShow(false);
     });
-    // return () => window.removeEventListener("scroll");
+    return () => window.removeEventListener("scroll");
   }, []);
 
   return (

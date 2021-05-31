@@ -10,9 +10,9 @@ import HomeIcon from "@material-ui/icons/Home";
 import BurgerIcon from "./BurgerIcon";
 import CloseIcon from "./CloseIcon";
 
-import styles from "../../styles/NavbarMobileStyles";
+import styles from "./styles/NavbarMobileStyles";
 // disable scroll-bar in sidebar container
-import "./Navbar.css";
+import "./styles/Navbar.css";
 
 function NavbarMobile({ classes, pageWrapId, outerContainerId }) {
   const [menuOpen, setMenuOpen] = useState(false);

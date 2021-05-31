@@ -2,7 +2,7 @@ import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
 import CancelIcon from "@material-ui/icons/Cancel";
-import styles from "../../styles/CloseIconStyles";
+import styles from "./styles/CloseIconStyles";
 
 function CloseIcon({ toggleMenu, classes }) {
   return (

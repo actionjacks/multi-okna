@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { withStyles } from "@material-ui/core/styles";
-import styles from "../../styles/ProductBox";
+import styles from "./styles/ProductBox";
 
 function ProductBox({ classes, url, name, fullHeight = false }) {
   return (
