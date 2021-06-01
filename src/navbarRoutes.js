@@ -6,20 +6,20 @@ export default [
         name: "Okna",
       },
       {
-        url: "/drzwi",
-        name: "Drzwi",
+        url: "/oslony-okienne",
+        name: "Osłony okienne",
       },
       {
-        url: "/bramy-garazowe",
-        name: "Bramy Garażowe",
+        url: "/drzwi",
+        name: "Drzwi",
       },
     ],
   },
   {
     right: [
       {
-        url: "/nasze-realizacje",
-        name: "Nasze Realizacje",
+        url: "/bramy-garazowe",
+        name: "Bramy Garażowe",
       },
       {
         url: "/realizacje",

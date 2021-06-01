@@ -7,10 +7,12 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HomeStyle";
 import Map from "./Map";
 
+import { sliderTop } from "./imgUrls";
+
 function Home({ classes }) {
   return (
     <div className={classes.home}>
-      <Slider />
+      <Slider sliderTop={sliderTop} />
       <h2>Zobacz naszą ofertę</h2>
       <div className={classes.products}>
         <div className={classes.productLeft}>
@@ -32,7 +34,7 @@ function Home({ classes }) {
         </p>
         <button>umów się na spotkanie</button>
       </div>
-      <Slider />
+      <Slider sliderTop={sliderTop} />
       <Map />
     </div>
   );

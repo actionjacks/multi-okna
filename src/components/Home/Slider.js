@@ -7,7 +7,6 @@ import "swiper/swiper.min.css";
 import "swiper/components/scrollbar/scrollbar.min.css";
 import "swiper/components/navigation/navigation.min.css";
 import "swiper/components/pagination/pagination.min.css";
-
 import "./styles/SliderStyles.css";
 
 // import Swiper core and required modules
@@ -21,7 +20,7 @@ import SwiperCore, {
 // install Swiper modules
 SwiperCore.use([Keyboard, Scrollbar, Navigation, Pagination]);
 
-export default function Slider() {
+export default function Slider({ sliderTop }) {
   return (
     <>
       <Swiper
@@ -45,33 +44,11 @@ export default function Slider() {
         }}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-001.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-002.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-003.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-004.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-005.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-006.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-007.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-008.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://cdn.magloft.com/github/swiper/images/page-009.jpg" />
-        </SwiperSlide>
+        {sliderTop.map((url) => (
+          <SwiperSlide>
+            <img src={url} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </>
   );
