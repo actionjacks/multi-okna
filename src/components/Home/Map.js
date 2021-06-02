@@ -39,15 +39,14 @@ function MyComponent() {
 
   const divStyle = {
     background: `white`,
-    border: `1px solid #ccc`,
-    padding: 15,
+    padding: "20px",
   };
   const linkStyle = {
     textDecoration: "none",
   };
 
   return isLoaded ? (
-    <div>
+    <div style={{ padding: "35px" }}>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={centers[0]}

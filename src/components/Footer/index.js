@@ -6,7 +6,7 @@ import { withStyles } from "@material-ui/core/styles";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import YouTubeIcon from "@material-ui/icons/YouTube";
-import ForwardIcon from "@material-ui/icons/Forward";
+import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 
 import styles from "./FooterStyle";
 
@@ -29,17 +29,21 @@ function Footer({ classes }) {
         </Link>
       </div>
       <div className={classes.contactContainer}>
+        <h2>Multi Okna sp. z o.o.</h2>
+        <p>Polna 4a, 16-010 Wasilków</p>
         <a className={classes.footerLink} href="tel:607473123">
-          zadzwoń 607 473 123
+          Zadzwoń 607-473-123
         </a>
         <a className={classes.footerLink} href="mailto:biuro@multi-okna.pl">
           biuro@multi-okna.pl
         </a>
       </div>
-      <ForwardIcon onClick={handleClick} className={classes.upIcon} />
       <span className={classes.credits}>
-        Projekt i wykonanie: actionjacks22@gmail.com
+        Projekt i wykonanie:
+        <br />
+        actionjacks22@gmail.com
       </span>
+      <ArrowUpwardIcon onClick={handleClick} className={classes.upIcon} />
     </div>
   );
 }

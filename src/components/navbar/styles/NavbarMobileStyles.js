@@ -1,4 +1,5 @@
 import sizes from "../../../styles/BreakPoints";
+import color from "../../../styles/Colors";
 
 const styles = {
   /* Position and sizing of burger button */
@@ -42,13 +43,13 @@ const styles = {
   },
   /* General sidebar styles */
   bmMenu: {
-    background: "rgba(194, 194, 194,0.6)",
+    background: color.additionalColor,
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
   },
   /* Morph shape necessary with bubble or elastic */
   bmMorphShape: {
-    fill: "rgba(194, 194, 194,1)",
+    fill: color.additionalColor,
   },
   /* Wrapper for item list */
   bmItemList: {
@@ -59,17 +60,16 @@ const styles = {
   },
   /* Individual item */
   bmItem: {
+    fontFamily: "'Lato', sans-serif",
+    fontWeight: "700",
     marginTop: "0.7rem",
     fontSize: "1.4rem",
     display: "inline-block",
-    color: "black",
-    // backgroundColor: "rgb(235, 235, 235)",
-    textShadow: "0px 5px 6px rgba(194, 194, 194, 1)",
+    paddingLeft: "25px",
+    color: color.secondColor,
+    textShadow: `0px 5px 6px ${color.additionalColor}`,
     textDecoration: "none",
     borderBottom: "1px solid black",
-    " &:hover": {
-      color: "red !important",
-    },
   },
   /* Styling of overlay */
   bmOverlay: {
