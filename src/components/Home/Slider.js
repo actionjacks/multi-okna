@@ -20,10 +20,11 @@ import SwiperCore, {
 // install Swiper modules
 SwiperCore.use([Keyboard, Scrollbar, Navigation, Pagination]);
 
-export default function Slider({ sliderTop }) {
+export default function Slider({ sliderTop, height }) {
   return (
     <>
       <Swiper
+        style={{ height: `${height}vh` }}
         slidesPerView={1}
         centeredSlides={false}
         slidesPerGroupSkip={1}
