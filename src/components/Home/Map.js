@@ -57,7 +57,7 @@ function MyComponent() {
       >
         {/* Child components, such as markers, info windows, etc. */}
         <>
-          <Marker
+          {/* <Marker
             onLoad={onLoad}
             position={centers[0]}
             onClick={() => setShow(!show)}
@@ -73,7 +73,7 @@ function MyComponent() {
                 </div>
               </InfoWindow>
             )}
-          </Marker>
+          </Marker> */}
         </>
       </GoogleMap>
     </div>
