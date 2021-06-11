@@ -1,0 +1,6 @@
+@media (max-width: 500px) {
+  .awssld__container {
+    padding-bottom: calc(var(--slider-height-percentage) * 1.25);
+    height: 50vh;
+  }
+}
