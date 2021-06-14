@@ -1,7 +1,13 @@
 import sizes from "../../../styles/BreakPoints";
 
 export default {
-  navbarContainer: {},
+  navbarContainer: {
+    position: "absolute",
+    top: "0",
+    left: "0",
+    zIndex: "99",
+    margin: "5% 5%",
+  },
   navbarMobile: {
     [sizes.up("md")]: {
       display: "none",
@@ -11,6 +17,9 @@ export default {
     fontSize: "3rem",
   },
   navbarDesktop: {
+    border: "5px solid gray",
+    borderRadius: "15px",
+
     [sizes.down("md")]: {
       display: "none",
     },
@@ -19,5 +28,13 @@ export default {
     justifyContent: "space-between",
     padding: "0 1.2rem",
   },
-  navbarBtn: { fontSize: "1.2rem", cursor: "pointer" },
+  navbarBtn: {
+    margin: "10px",
+    fontSize: "1.2rem",
+    marginLeft: "10px",
+    cursor: "pointer",
+  },
+  navbarBtnActive: {
+    background: "red",
+  },
 };

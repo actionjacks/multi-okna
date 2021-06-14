@@ -8,9 +8,9 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HomeStyles";
 import "./styles/Home.css";
 
-function Home({ selected }) {
+function Home({ selected, classes }) {
   return (
-    <div>
+    <div className={classes.homeContainer}>
       <AwesomeSlider animation="openAnimation" selected={selected}>
         <div>1</div>
         <div>2</div>

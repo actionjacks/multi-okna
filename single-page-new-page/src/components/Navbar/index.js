@@ -5,25 +5,33 @@ import styles from "./styles/NavbarStyles";
 
 import MenuIcon from "@material-ui/icons/Menu";
 
-function Navbar({ handleClick = null, classes }) {
+function Navbar({
+  handleClick = null,
+  classes,
+  selected,
+  btnNumbers,
+  disableBtns,
+}) {
   return (
     <div className={classes.navbarContainer}>
       <div className={classes.navbarMobile}>
         <MenuIcon className={classes.navbarBurger} />
       </div>
       <div className={classes.navbarDesktop}>
-        <button className={classes.navbarBtn} value="1" onClick={handleClick}>
-          stron 1
-        </button>
-        <button className={classes.navbarBtn} value="2" onClick={handleClick}>
-          stron 2
-        </button>
-        <button className={classes.navbarBtn} value="3" onClick={handleClick}>
-          stron 3
-        </button>
-        <button className={classes.navbarBtn} value="4" onClick={handleClick}>
-          stron 4
-        </button>
+        {btnNumbers.map((item, index) => (
+          <>
+            <button
+              disabled={disableBtns}
+              className={`${classes.navbarBtn} ${
+                selected === index ? classes.navbarBtnActive : ""
+              }`}
+              value={index + 1}
+              onClick={handleClick}
+            >
+              {btnNumbers[index]}
+            </button>
+          </>
+        ))}
       </div>
     </div>
   );

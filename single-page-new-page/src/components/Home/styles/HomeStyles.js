@@ -1,3 +1,5 @@
 import sizes from "../../../styles/BreakPoints";
 
-export default {};
+export default {
+  homeContainer: {},
+};
