@@ -8,14 +8,20 @@ import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HomeStyles";
 import "./styles/Home.css";
 
-function Home({ selected, classes }) {
+function Home({ selected, classes, handleClick }) {
   return (
     <div className={classes.homeContainer}>
-      <AwesomeSlider animation="openAnimation" selected={selected}>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+      <AwesomeSlider
+        animation="openAnimation"
+        selected={selected}
+        onTransitionStart={(e) => handleClick(e, "sliderClick")}
+        infinite={true}
+      >
+        <div id="1">1</div>
+        <div id="2">2</div>
+        <div id="3">3</div>
+        <div id="4">4</div>
+        <div id="5">5</div>
       </AwesomeSlider>
     </div>
   );

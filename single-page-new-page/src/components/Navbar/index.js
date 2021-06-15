@@ -2,6 +2,7 @@ import React from "react";
 
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/NavbarStyles";
+import "./styles/Navbar.css";
 
 import MenuIcon from "@material-ui/icons/Menu";
 
@@ -21,12 +22,12 @@ function Navbar({
         {btnNumbers.map((item, index) => (
           <>
             <button
-              disabled={disableBtns}
+              disabled={disableBtns || selected === index}
               className={`${classes.navbarBtn} ${
                 selected === index ? classes.navbarBtnActive : ""
               }`}
-              value={index + 1}
-              onClick={handleClick}
+              value={index}
+              onClick={(e) => handleClick(e, "navbarClick")}
             >
               {btnNumbers[index]}
             </button>

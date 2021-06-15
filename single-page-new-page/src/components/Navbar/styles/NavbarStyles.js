@@ -17,7 +17,7 @@ export default {
     fontSize: "3rem",
   },
   navbarDesktop: {
-    border: "5px solid gray",
+    boxShadow: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
     borderRadius: "15px",
 
     [sizes.down("md")]: {
@@ -29,12 +29,16 @@ export default {
     padding: "0 1.2rem",
   },
   navbarBtn: {
+    fontFamily: "'Roboto', sans-serif",
     margin: "10px",
-    fontSize: "1.2rem",
+    fontSize: "1rem",
     marginLeft: "10px",
     cursor: "pointer",
+    border: "none",
+    backgroundColor: "transparent",
+    transition: "1s",
   },
   navbarBtnActive: {
-    background: "red",
+    borderBottom: "1px solid red",
   },
 };
