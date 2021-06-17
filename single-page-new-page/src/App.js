@@ -3,9 +3,12 @@ import Home from "./components/Home/index";
 import Navbar from "./components/Navbar";
 
 import btnNames from "./btnsNames";
+
+import { withStyles } from "@material-ui/core/styles";
+import styles from "./AppStyles";
 import "./App.css";
 
-function App() {
+function App({ classes }) {
   const [selected, setSelected] = useState(0);
   const [disableBtns, setDisableBtns] = useState(false);
 
@@ -38,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className={classes.root}>
       <Navbar
         handleClick={handleClick}
         selected={selected}
@@ -50,4 +53,4 @@ function App() {
   );
 }
 
-export default App;
+export default withStyles(styles)(App);

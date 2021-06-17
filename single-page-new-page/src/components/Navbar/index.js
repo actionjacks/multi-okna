@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import BurgerIcon from "./BurgerIcon";
+import MobileNavbar from "./MobileNavbar";
 
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/NavbarStyles";
 import "./styles/Navbar.css";
-
-import MenuIcon from "@material-ui/icons/Menu";
 
 function Navbar({
   handleClick = null,
@@ -13,12 +13,32 @@ function Navbar({
   btnNumbers,
   disableBtns,
 }) {
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth >= 767) {
+        setActive(false);
+      } else setActive(true);
+    });
+    return () => window.removeEventListener("scroll");
+  }, []);
+
   return (
     <div className={classes.navbarContainer}>
       <div className={classes.navbarMobile}>
-        <MenuIcon className={classes.navbarBurger} />
+        <div
+          onClick={() => setActive(!active)}
+          className={`container ${active ? "active" : ""}`}
+        >
+          <BurgerIcon />
+        </div>
       </div>
-      <div className={classes.navbarDesktop}>
+      <div
+        className={`${
+          active ? classes.navbarMobileContent : classes.navbarDesktop
+        }`}
+      >
         {btnNumbers.map((item, index) => (
           <>
             <button

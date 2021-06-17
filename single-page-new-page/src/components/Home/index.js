@@ -10,7 +10,7 @@ import "./styles/Home.css";
 
 function Home({ selected, classes, handleClick }) {
   return (
-    <div className={classes.homeContainer}>
+    <div className={classes.root}>
       <AwesomeSlider
         animation="openAnimation"
         selected={selected}

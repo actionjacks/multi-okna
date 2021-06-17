@@ -9,24 +9,29 @@ export default {
     margin: "5% 5%",
   },
   navbarMobile: {
-    [sizes.up("md")]: {
+    [sizes.up("sm")]: {
       display: "none",
     },
-  },
-  navbarBurger: {
-    fontSize: "3rem",
   },
   navbarDesktop: {
     boxShadow: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
     borderRadius: "15px",
 
-    [sizes.down("md")]: {
+    [sizes.down("sm")]: {
       display: "none",
     },
 
     display: "flex",
     justifyContent: "space-between",
     padding: "0 1.2rem",
+  },
+  navbarMobileContent: {
+    display: "flex",
+    position: "fixed",
+    top: "5%",
+    left: "10%",
+    flexDirection: "column",
+    border: "1px solid red",
   },
   navbarBtn: {
     fontFamily: "'Roboto', sans-serif",
