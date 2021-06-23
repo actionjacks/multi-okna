@@ -16,12 +16,12 @@ function Navbar({
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener("resize", () => {
       if (window.innerWidth >= 767) {
         setActive(false);
-      } else setActive(true);
+      }
     });
-    return () => window.removeEventListener("scroll");
+    return () => window.removeEventListener("resize");
   }, []);
 
   return (

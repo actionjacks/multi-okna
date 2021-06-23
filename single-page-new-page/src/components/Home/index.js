@@ -2,7 +2,7 @@ import React from "react";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import "react-awesome-slider/dist/custom-animations/open-animation.css";
+import "react-awesome-slider/dist/custom-animations/fall-animation.css";
 
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HomeStyles";
@@ -12,7 +12,7 @@ function Home({ selected, classes, handleClick }) {
   return (
     <div className={classes.root}>
       <AwesomeSlider
-        animation="openAnimation"
+        animation="fallAnimation"
         selected={selected}
         onTransitionStart={(e) => handleClick(e, "sliderClick")}
         infinite={true}
