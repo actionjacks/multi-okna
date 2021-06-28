@@ -1,4 +1,5 @@
 import React from "react";
+import Windows from "../FirstScreen";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
@@ -17,7 +18,9 @@ function Home({ selected, classes, handleClick }) {
         onTransitionStart={(e) => handleClick(e, "sliderClick")}
         infinite={true}
       >
-        <div id="1">1</div>
+        <div className={classes.contentContainer} id="1">
+          <Windows />
+        </div>
         <div id="2">2</div>
         <div id="3">3</div>
         <div id="4">4</div>
