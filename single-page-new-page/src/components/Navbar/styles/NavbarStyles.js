@@ -14,6 +14,7 @@ export default {
     },
   },
   navbarDesktop: {
+    background: "white",
     boxShadow: "rgba(0, 0, 0, 0.2) 0px 18px 50px -10px",
     borderRadius: "15px",
 
@@ -26,6 +27,7 @@ export default {
     padding: "0 1.2rem",
   },
   navbarMobileContent: {
+    background: "white",
     display: "flex",
     position: "fixed",
     top: "5%",
