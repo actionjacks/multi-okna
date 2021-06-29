@@ -1,22 +1,21 @@
 import React from "react";
+//screens
 import MultiOknaScreen from "../FirstScreen";
 import ContactScreen from "../ContactScreen";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
-import "react-awesome-slider/dist/custom-animations/open-animation.css";
+import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HomeStyles";
 import "./styles/Home.css";
 
-import bg1 from "../FirstScreen/assets/img1.jpg"; //to do move to styles.js
-
 function Home({ selected, classes, handleClick }) {
   return (
     <div className={classes.root}>
       <AwesomeSlider
-        animation="openAnimation"
+        animation="cubeAnimation"
         selected={selected}
         onTransitionStart={(e) => handleClick(e, "sliderClick")}
         infinite={true}
@@ -24,7 +23,6 @@ function Home({ selected, classes, handleClick }) {
         fillParent={true}
       >
         <div
-          style={{ backgroundImage: `url("${bg1}")` }}
           className={classes.contentContainer}
           id="1"
         >

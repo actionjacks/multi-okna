@@ -37,7 +37,7 @@ function App({ classes }) {
   const activeNavbarBtns = () => {
     setTimeout(() => {
       setDisableBtns(false);
-    }, 1400);
+    }, 1500);
   };
 
   return (
