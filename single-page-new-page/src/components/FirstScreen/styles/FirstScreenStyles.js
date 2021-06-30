@@ -1,4 +1,5 @@
 import sizes from "../../../styles/BreakPoints";
+import color from "../../../styles/Colors";
 
 export default {
   root: {
@@ -7,8 +8,8 @@ export default {
     position: "relative",
   },
   heading: {
-    backgroundColor: "rgba(255,255,255,0.3)",
-    width: "50%",
+    backgroundColor: color.colorSecondaryLightTransparent,
+    width: "70%",
     padding: "35px 25px 25px 25px",
     position: "absolute",
     top: "50%",
@@ -18,13 +19,28 @@ export default {
   },
   about: {
     textAlign: "center",
-    color: "rgb(0, 0, 0)",
+    color: color.colorPrimaryTeal,
+    textShadow: `1px 1px 1px ${color.colorPrimaryDark}`,
+    letterSpacing: "2px",
+    fontWeight: "700",
     fontFamily: "'Roboto', sans-serif",
-    // textShadow: "2px 2px 2px black",
+    fontSize: "1.5rem",
+
+    [sizes.down("sm")]: {
+      display: "none",
+    },
   },
   ourOffer: {
+    color: color.colorPrimaryDark,
+    letterSpacing: "2px",
     fontFamily: "'Roboto', sans-serif",
     textAlign: "center",
+    fontWeight: "700",
     padding: "0 55px",
+
+    [sizes.down("sm")]: {
+      textAlign: "left",
+      padding: "0 5px",
+    },
   },
 };

@@ -7,6 +7,7 @@
 }
 
 .categoryWrapper {
+  font-family: "Roboto", sans-serif;
   height: 310px;
   width: 460px;
   display: flex;
@@ -16,6 +17,7 @@
 }
 
 .categoryWrapper:after {
+  font-family: "Roboto", sans-serif;
   position: absolute;
   top: 0;
   left: 0;
@@ -47,29 +49,35 @@
 }
 
 .categoryWrapper h1 {
-  color: rgb(88, 169, 187);
-  text-shadow: 2px 2px 2px black;
-  font-size: 50px;
+  color: #00adb5;
+  text-shadow: 1px 1px 1px #222831;
+  font-size: 45px;
   letter-spacing: 2px;
   -webkit-transition: all 0.15s ease 0s;
   position: relative;
   z-index: 10;
 }
-
+@media (max-width: 340px) {
+  .categoryWrapper h1 {
+    font-size: 35px;
+  }
+}
 .categoryWrapper:hover h1 {
   transform: translateY(-10px);
 }
 
 .categoryWrapper button {
+  font-family: "Roboto", sans-serif;
   position: absolute;
   transform: translatey(60px);
   -webkit-appearance: none;
   border: none;
   background: none;
-  color: rgb(88, 169, 187);
+  color: #00adb5;
   width: 250px;
   height: 50px;
   font-size: 20px;
+  font-weight: 700;
   padding: 0;
   margin: 0;
   outline: none;
@@ -77,6 +85,7 @@
 }
 
 .categoryWrapper button span {
+  font-family: "Roboto", sans-serif;
   display: block;
   position: relative;
   line-height: 50px;
@@ -85,14 +94,14 @@
 }
 
 .categoryWrapper button > span:after {
+  font-family: "Roboto", sans-serif;
   content: "";
   position: absolute;
   top: 0;
   left: 50%;
   width: 20px;
   height: 0;
-
-  border: 1px solid white;
+  border: 1px solid #eeeeee;
   border-left: none;
   border-bottom: none;
 
@@ -112,8 +121,7 @@
   right: 50%;
   width: 20px;
   height: 0;
-
-  border: 1px solid white;
+  border: 1px solid #eeeeee;
   border-right: none;
   border-bottom: none;
 
@@ -138,7 +146,7 @@
 
 .categoryWrapper:hover button > span > span:before {
   opacity: 1;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #eeeeee;
   width: calc(50%);
   height: 1px;
   transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
@@ -156,7 +164,7 @@
 
 .categoryWrapper:hover button > span > span:after {
   opacity: 1;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #eeeeee;
   width: calc(50%);
   height: 1px;
   transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
@@ -168,7 +176,8 @@
 }
 
 .categoryWrapper:hover button > span > span > span {
-  color: rgb(0, 0, 0);
+  color: #00adb5;
+  text-shadow: 1px 1px 1px #eeeeee;
 }
 
 .categoryWrapper button > span > span > span:after {
@@ -177,11 +186,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  color: #1f2e4d;
+  color: #00adb5;
   content: attr(data-attr-span);
   width: 0%;
   height: 100%;
-  background: rgb(255, 255, 255);
+  background: rgba(230, 230, 230, 0.7);
   white-space: nowrap;
   text-align: center;
   margin: auto;
