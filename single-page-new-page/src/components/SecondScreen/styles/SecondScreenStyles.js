@@ -3,19 +3,8 @@ import color from "../../../styles/Colors";
 
 export default {
   root: {
-    display: "flex",
-    flexWrap: "wrap",
-    backgroundColor: color.colorSecondaryLight,
+    marginTop: "300px",
+    width: "100vw",
     height: "100vh",
-    marginLeft: "auto",
-    marginRight: "auto",
   },
-  SecondScreenTop: {
-    width: "100vw",
-  },
-  SecondScreenBottom: {
-    display: "flex",
-    flexWrap: "wrap",
-    width: "100vw",
-  }, 
 };

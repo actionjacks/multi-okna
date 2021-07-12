@@ -30,9 +30,7 @@ function Home({ selected, classes, handleClick }) {
         <div id="2">
           <SecondScreenStyles />
         </div>
-        <div id="3">
-          <DisabledTabs />
-        </div>
+        <div id="3">3</div>
         <div id="4">4</div>
         <div id="5">5</div>
         <div id="6">
