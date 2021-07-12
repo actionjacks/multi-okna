@@ -14,9 +14,12 @@ function MultiOknaScreen({ classes }) {
             <button>
               <span>
                 <span>
-                  <span data-attr-span="Zadzwoń 607-473-123">
+                  <a
+                    href="tel:+48607473123"
+                    data-attr-span="Zadzwoń 607-473-123"
+                  >
                     Zadzwoń 607-473-123
-                  </span>
+                  </a>
                 </span>
               </span>
             </button>

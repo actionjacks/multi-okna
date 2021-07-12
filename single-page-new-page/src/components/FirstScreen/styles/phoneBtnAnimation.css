@@ -164,23 +164,26 @@
 
 .categoryWrapper:hover button > span > span:after {
   opacity: 1;
+  text-decoration: none;
   border-bottom: 1px solid #eeeeee;
   width: calc(50%);
   height: 1px;
   transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
 }
 
-.categoryWrapper button > span > span > span {
+.categoryWrapper button > span > span > a {
   transition: color 0.15s ease-out 0.3s;
   color: transparent;
+  text-decoration: none;
 }
 
-.categoryWrapper:hover button > span > span > span {
+.categoryWrapper:hover button > span > span > a {
+  text-decoration: none;
   color: #00adb5;
   text-shadow: 1px 1px 1px #eeeeee;
 }
 
-.categoryWrapper button > span > span > span:after {
+.categoryWrapper button > span > span > a:after {
   position: absolute;
   top: 0;
   left: 0;

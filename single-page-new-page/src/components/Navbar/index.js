@@ -21,7 +21,7 @@ function Navbar({
         setActive(false);
       }
     });
-    return () => window.removeEventListener("resize");
+    return () => window.removeEventListener("resize", null);
   }, []);
 
   return (
