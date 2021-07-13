@@ -1,6 +1,7 @@
 import React from "react";
 import WindowBox from "./WindowBox";
 
+import Container from "@material-ui/core/Container";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
@@ -10,6 +11,7 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
+import mylogo from "./assets/logos/logo-multi-okna.png";
 import windowsNames from "./windowsNames";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/SecondScreenStyles";
@@ -47,13 +49,6 @@ function a11yProps(index) {
   };
 }
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    backgroundColor: theme.palette.background.paper,
-    // width: 500,
-  },
-}));
-
 function SecondScreen({ classes }) {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
@@ -68,6 +63,14 @@ function SecondScreen({ classes }) {
 
   return (
     <div className={classes.root}>
+      <Container fixed className={classes.paper}>
+        <WindowBox
+          url={mylogo}
+          // logo={mylogo}
+          title="… to nie tylko slogan "
+          desc="towarzyszący nam od lat. To realne działania w kierunku nieustannego rozszerzania oferty sprzedaży związanej z oknami."
+        />
+      </Container>
       <AppBar position="static" color="default">
         <Tabs value={value} onChange={handleChange} variant="fullWidth">
           {windowsNames.map(({ title }, index) => (

@@ -23,7 +23,7 @@ export default [
     url: imgAluLook,
     logo: logoAluLook,
     title: "Chłodna Elegancja",
-    desc: "Ekskluzywne rozwiązanie marki MSline+. Połączenie narożników pod kątem prostym oraz nowoczesne okleiny sprawiają, że okno wygląda jak z okładzinami aluminiowymi.",
+    desc: "Połączenie narożników pod kątem prostym oraz nowoczesne okleiny sprawiają, że okno wygląda jak z okładzinami aluminiowymi.",
   },
   {
     id: 3,
