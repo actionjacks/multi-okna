@@ -3,10 +3,16 @@ import color from "../../../styles/Colors";
 
 export default {
   root: {
-    marginTop:'10vw',
+    marginTop: "10vw",
     width: "100vw",
     height: "90vh",
     backgroundColor: color.colorSecondaryLight,
   },
-  paper: { padding: "5px" },
+  tabs: {
+    display: "flex",
+    flexGrow: 1,
+    boxShadow:
+      "0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset",
+  },
+  tab: {},
 };

@@ -2,8 +2,10 @@ import React from "react";
 //screens
 import MultiOknaScreen from "../FirstScreen";
 import SecondScreenStyles from "../SecondScreen";
+import ThirdScreenStyles from "../ThirdScreen";
+import FouthScreen from "../FourthScreen";
+import FifthScreen from "../FifthScreen";
 import ContactScreen from "../ContactScreen";
-import DisabledTabs from "../ThirdScreen";
 
 import AwesomeSlider from "react-awesome-slider";
 import "react-awesome-slider/dist/styles.css";
@@ -30,9 +32,15 @@ function Home({ selected, classes, handleClick }) {
         <div id="2">
           <SecondScreenStyles />
         </div>
-        <div id="3">3</div>
-        <div id="4">4</div>
-        <div id="5">5</div>
+        <div id="3">
+          <ThirdScreenStyles />
+        </div>
+        <div id="4">
+          <FouthScreen />
+        </div>
+        <div id="5">
+          <FifthScreen />
+        </div>
         <div id="6">
           <ContactScreen />
         </div>

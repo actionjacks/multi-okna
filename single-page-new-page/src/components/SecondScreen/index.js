@@ -4,14 +4,14 @@ import WindowBox from "./WindowBox";
 import Container from "@material-ui/core/Container";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { useTheme } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
-import mylogo from "./assets/logos/logo-multi-okna.png";
+import windowLogo from "./assets/logo-okna.png";
 import windowsNames from "./windowsNames";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/SecondScreenStyles";
@@ -62,13 +62,12 @@ function SecondScreen({ classes }) {
   };
 
   return (
-    <div className={classes.root}>
-      <Container fixed className={classes.paper}>
+    <Container className={classes.root}>
+      <Container className={classes.paper}>
         <WindowBox
-          url={mylogo}
-          // logo={mylogo}
-          title="… to nie tylko slogan "
-          desc="towarzyszący nam od lat. To realne działania w kierunku nieustannego rozszerzania oferty sprzedaży związanej z oknami."
+          url={windowLogo}
+          title="Okna"
+          desc="Lorem lorem lorem lorem"
         />
       </Container>
       <AppBar position="static" color="default">
@@ -89,7 +88,7 @@ function SecondScreen({ classes }) {
           </TabPanel>
         ))}
       </SwipeableViews>
-    </div>
+    </Container>
   );
 }
 
