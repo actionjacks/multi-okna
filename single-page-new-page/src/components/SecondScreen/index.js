@@ -67,17 +67,18 @@ function SecondScreen({ classes }) {
         <WindowBox
           url={windowLogo}
           title="Okna"
-          desc="Lorem lorem lorem lorem"
+          desc="Nasza firma montuje okna dostosowane do potrzeb naszych Klientów. W naszej ofercie znajdują się typowe okna PCV (plastikowe), jak również okna o konstrukcji aluminiowej."
         />
       </Container>
       <AppBar position="static" color="default">
         <Tabs value={value} onChange={handleChange} variant="fullWidth">
           {windowsNames.map(({ title }, index) => (
-            <Tab label={title} {...a11yProps(index)} />
+            <Tab className={classes.tabs} label={title} {...a11yProps(index)} />
           ))}
         </Tabs>
       </AppBar>
       <SwipeableViews
+        className={classes.paper}
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}

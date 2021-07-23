@@ -7,7 +7,7 @@ import styles from "./styles/FirstScreenStyles";
 
 function MultiOknaScreen({ classes }) {
   return (
-    <Container className={classes.root}>
+    <div className={classes.root}>
       <div>
         <div className={classes.heading}>
           <div class="centerBox">
@@ -39,7 +39,7 @@ function MultiOknaScreen({ classes }) {
           </p>
         </div>
       </div>
-    </Container>
+    </div>
   );
 }
 

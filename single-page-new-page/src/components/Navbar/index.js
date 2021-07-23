@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import BurgerIcon from "./BurgerIcon";
-import MobileNavbar from "./MobileNavbar";
 
+import Container from "@material-ui/core/Container";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/NavbarStyles";
-import "./styles/Navbar.css";
 
 function Navbar({
   handleClick = null,
@@ -25,7 +24,7 @@ function Navbar({
   }, []);
 
   return (
-    <div className={classes.navbarContainer}>
+    <Container className={classes.navbarContainer}>
       <div className={classes.navbarMobile}>
         <div
           onClick={() => setActive(!active)}
@@ -54,7 +53,7 @@ function Navbar({
           </>
         ))}
       </div>
-    </div>
+    </Container>
   );
 }
 

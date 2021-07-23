@@ -58,7 +58,7 @@ function ThirdScreen({ classes }) {
       <WindowBox
         url={blindsLogo}
         title="Osłony Okienne"
-        desc="Lorem lorem lorem lorem"
+        desc="Rolety, moskitiery drzwiowe oraz zasłony to tylko niektóre z produktów, które proponujemy. Wykonujemy także rolety i żaluzje na wymiar. Zapraszamy do zapoznania się z ofertą."
       />
       <Container className={classes.tabs}>
         <Tabs

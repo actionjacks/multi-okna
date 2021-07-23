@@ -9,14 +9,14 @@ import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/WindowBoxStyles";
 
-function WindowBox({ url, logo, title, desc, classes }) {
+function WindowBox({ url, logo, title, desc, classes, tabContent }) {
   return (
     <Card className={classes.root}>
       <CardActionArea className={classes.cardArea}>
         <CardMedia
           component="img"
           alt={`${title} logo`}
-          className={logo ? classes.media : classes.mediaTop}
+          className={!tabContent ? classes.mediaTop : classes.media}
           image={url}
           title={title}
         />

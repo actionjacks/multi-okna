@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
 import { withStyles } from "@material-ui/core/styles";
-import styles from "./styles/WindowBoxStyles";
+import styles from "./styles/DoorsBoxStyles";
 
 function WindowBox({ url, logo, title, desc, classes }) {
   return (

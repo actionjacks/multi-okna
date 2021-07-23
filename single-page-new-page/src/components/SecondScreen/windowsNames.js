@@ -36,7 +36,7 @@ export default [
     id: 4,
     url: imgW800,
     logo: logoW800,
-    title: "Dużo, dużo cieplej",
+    title: "Dużo, cieplej",
     desc: "Chronimy ciepło wewnątrz Państwa domów. Okna MS evolution [82] podnoszą temperaturę.",
   },
 ];

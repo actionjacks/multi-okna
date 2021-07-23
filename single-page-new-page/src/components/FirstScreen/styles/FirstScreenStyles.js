@@ -1,5 +1,6 @@
 import sizes from "../../../styles/BreakPoints";
-import color from "../../../styles/Colors";
+import colors from "../../../styles/Colors";
+import fonts from "../../../styles/Fonts";
 
 export default {
   root: {
@@ -8,7 +9,7 @@ export default {
     position: "relative",
   },
   heading: {
-    backgroundColor: color.colorSecondaryLightTransparent,
+    backgroundColor: colors.colorSecondaryLightTransparent,
     width: "70%",
     padding: "35px 25px 25px 25px",
     position: "absolute",
@@ -19,11 +20,11 @@ export default {
   },
   about: {
     textAlign: "center",
-    color: color.colorPrimaryTeal,
-    textShadow: `1px 1px 1px ${color.colorPrimaryDark}`,
+    color: colors.colorPrimaryDark,
+    textShadow: `1px 1px 1px ${colors.colorPrimaryDark}`,
     letterSpacing: "2px",
     fontWeight: "700",
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: fonts.fontMain,
     fontSize: "1.5rem",
 
     [sizes.down("sm")]: {
@@ -31,9 +32,9 @@ export default {
     },
   },
   ourOffer: {
-    color: color.colorPrimaryDark,
+    color: colors.colorPrimaryDark,
     letterSpacing: "2px",
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: fonts.fontMain,
     textAlign: "center",
     fontWeight: "700",
     padding: "0 55px",

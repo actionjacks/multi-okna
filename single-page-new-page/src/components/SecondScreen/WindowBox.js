@@ -12,7 +12,9 @@ import styles from "./styles/WindowBoxStyles";
 function WindowBox({ url, logo, title, desc, classes }) {
   return (
     <Card className={classes.root}>
-      <CardActionArea className={classes.cardArea}>
+      <CardActionArea
+        className={!logo ? classes.cardArea : classes.cardAreaBottom}
+      >
         <CardMedia
           component="img"
           alt={`${title} logo`}
@@ -20,7 +22,7 @@ function WindowBox({ url, logo, title, desc, classes }) {
           image={url}
           title={title}
         />
-        <CardContent>
+        <CardContent className={classes.cardContent}>
           {logo ? (
             <CardMedia
               component="img"

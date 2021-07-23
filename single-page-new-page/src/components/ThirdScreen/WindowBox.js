@@ -12,7 +12,9 @@ import styles from "./styles/WindowBoxStyles";
 function WindowBox({ url, logo, title, desc, classes, tabContent }) {
   return (
     <Card className={classes.root}>
-      <CardActionArea className={classes.cardArea}>
+      <CardActionArea
+        className={tabContent ? classes.cardArea : classes.cardAreaTop}
+      >
         <CardMedia
           component="img"
           alt={`${title} logo`}
@@ -20,20 +22,11 @@ function WindowBox({ url, logo, title, desc, classes, tabContent }) {
           image={url}
           title={title}
         />
-        <CardContent>
+        <CardContent className={classes.cardContent}>
           {logo ? (
-            <CardMedia
-              component="img"
-              alt={`${title} logo`}
-              className={classes.mediaLogo}
-              image={logo}
-            />
+            <CardMedia component="img" alt={`${title} logo`} image={logo} />
           ) : (
-            <CardMedia
-              alt={`${title} logo`}
-              className={classes.mediaLogo}
-              image={logo}
-            />
+            <CardMedia alt={`${title} logo`} image={logo} />
           )}
           <Typography
             className={classes.title}
@@ -44,7 +37,7 @@ function WindowBox({ url, logo, title, desc, classes, tabContent }) {
             {title}
           </Typography>
           <Typography
-            className={logo ? classes.desc : classes.descTop}
+            className={classes.descTop}
             variant="body2"
             color="textSecondary"
             component="p"

@@ -9,6 +9,7 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 
 import gatesLogo from "./assets/logo-brama.png";
+import gatesNames from "./gatesNames";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/FifthScreenStyles";
 
@@ -56,7 +57,7 @@ function FifthScreen({ classes }) {
     <Container className={classes.root}>
       <WindowBox
         url={gatesLogo}
-        title="Bramy Garażowe"
+        title="Osłony Okienne"
         desc="Lorem lorem lorem lorem"
       />
       <Container className={classes.tabs}>
@@ -65,37 +66,25 @@ function FifthScreen({ classes }) {
           variant="scrollable"
           value={value}
           onChange={handleChange}
-          // className={classes.tabs}
         >
-          <Tab className={classes.tab} label="Item One" {...a11yProps(0)} />
-          <Tab className={classes.tab} label="Item Two" {...a11yProps(1)} />
-          <Tab className={classes.tab} label="Item Three" {...a11yProps(2)} />
-          <Tab className={classes.tab} label="Item Four" {...a11yProps(3)} />
-          <Tab className={classes.tab} label="Item Five" {...a11yProps(4)} />
-          <Tab className={classes.tab} label="Item Six" {...a11yProps(5)} />
-          <Tab className={classes.tab} label="Item Seven" {...a11yProps(6)} />
+          {gatesNames.map((item, index) => (
+            <Tab
+              className={classes.tab}
+              label={item.title}
+              {...a11yProps(index)}
+            />
+          ))}
         </Tabs>
-        <TabPanel value={value} index={0}>
-          Item One
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          Item Two
-        </TabPanel>
-        <TabPanel value={value} index={2}>
-          Item Three
-        </TabPanel>
-        <TabPanel value={value} index={3}>
-          Item Four
-        </TabPanel>
-        <TabPanel value={value} index={4}>
-          Item Five
-        </TabPanel>
-        <TabPanel value={value} index={5}>
-          Item Six
-        </TabPanel>
-        <TabPanel value={value} index={6}>
-          Item Seven
-        </TabPanel>
+        {gatesNames.map((item, index) => (
+          <TabPanel className={classes.tabPanel} value={value} index={index}>
+            <WindowBox
+              tabContent={true}
+              url={item.url}
+              title={item.title}
+              desc={item.desc}
+            />
+          </TabPanel>
+        ))}
       </Container>
     </Container>
   );

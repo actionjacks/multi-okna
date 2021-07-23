@@ -8,11 +8,5 @@ export default {
     height: "90vh",
     backgroundColor: color.colorSecondaryLight,
   },
-  tabs: {
-    display: "flex",
-    flexGrow: 1,
-    boxShadow:
-      "0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset",
-  },
-  tab: {},
+  paper: { padding: "5px" },
 };
