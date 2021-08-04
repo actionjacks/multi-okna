@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import ContactTop from "./ContactTop";
 import { NavLink, Link } from "react-router-dom";
 
 import BurgerIcon from "./BurgerIcon";
 import Spinner from "../../components/Spinner";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/NavbarStyles";
+//animation mobile menu
+import "./styles/AnimTransform.css";
 
+//refactor the code to avoid building two menus
 function Navbar({ classes, contacts, pageData }) {
   const [manuScrolled, setMenuScrolled] = useState(false);
   const [showBurger, setShowBurger] = useState(false);
@@ -13,9 +17,12 @@ function Navbar({ classes, contacts, pageData }) {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY >= 60) {
         setMenuScrolled(true);
-      } else setMenuScrolled(false);
+      }
+      if (window.scrollY <= 50) {
+        setMenuScrolled(false);
+      }
     });
     return () => {
       window.removeEventListener("scroll", null);
@@ -37,39 +44,47 @@ function Navbar({ classes, contacts, pageData }) {
       {!pageData && <Spinner />}
       {pageData && (
         <>
-          <div className={classes.contactContainer}>
-            {contacts.map((item, index) => (
-              <a
-                className={classes.contactLink}
-                href={index === 0 ? `mailto:${item}` : `tel:${item}`}
-              >
-                {item}
-              </a>
-            ))}
-          </div>
+          <ContactTop contacts={contacts} />
           {showBurger ? (
             <div
               onClick={() => setBurgerOpen(!burgerOpen)}
-              className={`container ${burgerOpen ? "active" : ""}`}
+              className={`containerBurger${burgerOpen ? " active" : ""}`}
             >
               <BurgerIcon />
+              <nav
+                className={`${classes.menuContainerMobile} ${
+                  burgerOpen
+                    ? `${classes.mobileOpened} animMobileTransform`
+                    : ""
+                }`}
+              >
+                <ul className={classes.menuMobile}>
+                  {pageData.map((item) => (
+                    <li className={classes.menuLinkMobile}>
+                      <a>{item}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
           ) : (
-            <nav
-              className={
-                !manuScrolled
-                  ? classes.menuContainer
-                  : classes.menuContainerScrolled
-              }
-            >
-              <ul className={classes.menu}>
-                {pageData.map((item) => (
-                  <li className={classes.menuLink}>
-                    <a>{item}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <div>
+              <nav
+                className={
+                  !manuScrolled
+                    ? classes.menuContainer
+                    : classes.menuContainerScrolled
+                }
+              >
+                <ul className={classes.menu}>
+                  {pageData.map((item) => (
+                    <li className={classes.menuLink}>
+                      <a>{item}</a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
           )}
         </>
       )}

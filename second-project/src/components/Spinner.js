@@ -1,16 +1,24 @@
 import React from "react";
+
+import styled from "styled-components";
 import { Spinner } from "react-bootstrap";
-import logo from "../assets/logo.webp";
 
 function Loader() {
   return (
-    <div className="d-flex justify-content-center">
+    <SpinnerContainer>
       <Spinner animation="grow" size="sm" />
       <Spinner animation="grow" />
-      <Spinner animation="grow" size="sm" />
       <Spinner animation="grow" />
-    </div>
+      <Spinner animation="grow" />
+    </SpinnerContainer>
   );
 }
 
 export default Loader;
+
+const SpinnerContainer = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;

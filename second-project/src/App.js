@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
+import TopBaner from "./components/TopBaner";
 import Navbar from "./components/Navbar";
 import Routes from "./routes";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import ScrollBtn from "./components/ScrollBtn";
 import ErrorAlert from "./components/ErrorAlert";
 import Spinner from "./components/Spinner";
 
@@ -15,8 +20,8 @@ function App({ classes }) {
   function getPageData() {
     fetch(`./page_content.json`)
       .then((res) => res.json())
-      .then(({ contacts, navbarNames }) =>
-        setPageData({ contacts, navbarNames })
+      .then(({ contacts, navbarNames, homeContent }) =>
+        setPageData({ contacts, navbarNames, homeContent })
       )
       .catch((err) =>
         setPageDataErr({
@@ -28,10 +33,15 @@ function App({ classes }) {
 
   useEffect(() => {
     getPageData();
+
+    //animations
+    AOS.init({
+      duration: 1200,
+    });
   }, []);
 
   return (
-    <div className={classes.root}>
+    <div id="-root" className={classes.root}>
       {pageDataErr && (
         <ErrorAlert
           errTitle={pageDataErr.errTitle}
@@ -43,13 +53,15 @@ function App({ classes }) {
 
       {pageData && !pageDataErr && (
         <>
+          <TopBaner />
           <Navbar
             contacts={pageData.contacts}
             pageData={pageData.navbarNames}
           />
-          <Routes />
+          <Routes data={pageData.homeContent} />
         </>
       )}
+      <ScrollBtn />
     </div>
   );
 }
