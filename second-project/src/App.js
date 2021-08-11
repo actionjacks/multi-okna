@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import TopBaner from "./components/TopBaner";
 import Navbar from "./components/Navbar";
 import Routes from "./routes";
+import Footer from "./components/Footer";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -53,15 +53,15 @@ function App({ classes }) {
 
       {pageData && !pageDataErr && (
         <>
-          <TopBaner />
           <Navbar
             contacts={pageData.contacts}
             pageData={pageData.navbarNames}
           />
           <Routes data={pageData.homeContent} />
+          <ScrollBtn />
+          <Footer />
         </>
       )}
-      <ScrollBtn />
     </div>
   );
 }

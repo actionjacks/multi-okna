@@ -24,69 +24,60 @@ function Navbar({ classes, contacts, pageData }) {
         setMenuScrolled(false);
       }
     });
-    return () => {
-      window.removeEventListener("scroll", null);
-    };
-  }, []);
-
-  useEffect(() => {
     window.addEventListener("resize", () => {
       if (window.innerWidth >= 800) {
         setShowBurger(false);
         setBurgerOpen(false);
       } else setShowBurger(true);
     });
-    return () => window.removeEventListener("resize", null);
+    return () => {
+      window.removeEventListener("scroll", null);
+      window.removeEventListener("resize", null);
+    };
   }, []);
 
   return (
     <header className={classes.root}>
-      {!pageData && <Spinner />}
-      {pageData && (
-        <>
-          <ContactTop contacts={contacts} />
-          {showBurger ? (
-            <div
-              onClick={() => setBurgerOpen(!burgerOpen)}
-              className={`containerBurger${burgerOpen ? " active" : ""}`}
-            >
-              <BurgerIcon />
-              <nav
-                className={`${classes.menuContainerMobile} ${
-                  burgerOpen
-                    ? `${classes.mobileOpened} animMobileTransform`
-                    : ""
-                }`}
-              >
-                <ul className={classes.menuMobile}>
-                  {pageData.map((item) => (
-                    <li className={classes.menuLinkMobile}>
-                      <a>{item}</a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          ) : (
-            <div>
-              <nav
-                className={
-                  !manuScrolled
-                    ? classes.menuContainer
-                    : classes.menuContainerScrolled
-                }
-              >
-                <ul className={classes.menu}>
-                  {pageData.map((item) => (
-                    <li className={classes.menuLink}>
-                      <a>{item}</a>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          )}
-        </>
+      <ContactTop contacts={contacts} />
+
+      {showBurger ? (
+        <div
+          onClick={() => setBurgerOpen(!burgerOpen)}
+          className={`containerBurger${burgerOpen ? " active" : ""}`}
+        >
+          <BurgerIcon />
+          <nav
+            className={`${classes.menuContainerMobile} ${
+              burgerOpen ? `${classes.mobileOpened} animMobileTransform` : ""
+            }`}
+          >
+            <ul className={classes.menuMobile}>
+              {pageData.map((item) => (
+                <li className={classes.menuLinkMobile}>
+                  <a>{item}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
+      ) : (
+        <div>
+          <nav
+            className={
+              !manuScrolled
+                ? classes.menuContainer
+                : classes.menuContainerScrolled
+            }
+          >
+            <ul className={classes.menu}>
+              {pageData.map((item) => (
+                <li className={classes.menuLink}>
+                  <a>{item}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </div>
       )}
     </header>
   );

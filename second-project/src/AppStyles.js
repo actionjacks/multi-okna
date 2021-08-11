@@ -5,5 +5,5 @@ import fonts from "./root-styles/Fonts";
 import bgImage from "./assets/img1_.webp";
 
 export default {
-  root: { height: "300vh" },
+  root: {},
 };

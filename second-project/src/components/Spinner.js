@@ -1,15 +1,12 @@
 import React from "react";
-
+import { RotatingPlane } from "better-react-spinkit";
 import styled from "styled-components";
 import { Spinner } from "react-bootstrap";
 
 function Loader() {
   return (
     <SpinnerContainer>
-      <Spinner animation="grow" size="sm" />
-      <Spinner animation="grow" />
-      <Spinner animation="grow" />
-      <Spinner animation="grow" />
+      <RotatingPlane size={65} color="black" />
     </SpinnerContainer>
   );
 }

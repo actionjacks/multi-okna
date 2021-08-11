@@ -5,11 +5,11 @@ import fonts from "../../../root-styles/Fonts";
 export default {
   root: {
     zIndex: "99",
-    position: "sticky",
-    top: "0",
+    position: "fixed",
     width: "100%",
     display: "flex",
     flexDirection: "column",
+    border: "1px solid red",
   },
   menuContainer: {
     display: "flex",
@@ -24,6 +24,10 @@ export default {
     backgroundColor: colors.secondDark,
     height: "2.5rem",
     transition: ".6s",
+
+    [sizes.down("sm")]: {
+      display: "none",
+    },
   },
   menu: {
     display: "flex",
