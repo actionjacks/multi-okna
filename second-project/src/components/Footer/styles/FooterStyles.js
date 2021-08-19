@@ -14,7 +14,15 @@ export default {
       flexDirection: "column",
     },
   },
+  contactIcon: {
+    zIndex: "1",
+    position: "inherit",
+    width: "5rem",
+    fontSize: "50px",
+    margin: "5px",
+  },
   footerParagraph: {
+    display: "flex",
     padding: "5.5rem 1.5rem 0 1.5rem",
     flex: "1",
 
@@ -54,7 +62,7 @@ export default {
       height: "10px",
     },
   },
-  icon: {
+  fbIcon: {
     position: "absolute",
     cursor: "pointer",
     top: "40%",

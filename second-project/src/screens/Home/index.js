@@ -23,7 +23,7 @@ const brands = [
   "../assets/img13.webp",
   "../assets/img14.webp",
 ];
-
+//todo add styles form header and description
 function Home({ classes, data }) {
   return (
     <main className={classes.root}>
@@ -33,7 +33,9 @@ function Home({ classes, data }) {
             <div className={classes.leftSite} data-aos="flip-up">
               <h2 className={classes.headerTitle}>{data[0].headerTitle}</h2>
               <h3 className={classes.smallHeader}>{data[0].smallHeader}</h3>
+              <hr />
               <p className={classes.description}>{data[0].description}</p>
+              <hr />
             </div>
             <div className={classes.rightSite} data-aos="flip-up">
               <img

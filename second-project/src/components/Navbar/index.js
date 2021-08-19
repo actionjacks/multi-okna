@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ContactTop from "./ContactTop";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
+import NavbarLogo from "./assets/logo.webp";
 import BurgerIcon from "./BurgerIcon";
-import Spinner from "../../components/Spinner";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/NavbarStyles";
 //animation mobile menu
@@ -16,6 +16,11 @@ function Navbar({ classes, contacts, pageData }) {
   const [burgerOpen, setBurgerOpen] = useState(false);
 
   useEffect(() => {
+    //aftere page load disable desktop navbar
+    if (window.innerWidth <= 800) {
+      setShowBurger(true);
+    }
+
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 60) {
         setMenuScrolled(true);
@@ -52,9 +57,11 @@ function Navbar({ classes, contacts, pageData }) {
             }`}
           >
             <ul className={classes.menuMobile}>
-              {pageData.map((item) => (
+              {pageData.map(({ name, url }, idx) => (
                 <li className={classes.menuLinkMobile}>
-                  <a>{item}</a>
+                  <NavLink to={url} key={idx}>
+                    {name}
+                  </NavLink>
                 </li>
               ))}
             </ul>
@@ -70,9 +77,13 @@ function Navbar({ classes, contacts, pageData }) {
             }
           >
             <ul className={classes.menu}>
-              {pageData.map((item) => (
+              <img className={classes.logoContainer} src={NavbarLogo} alt="" />
+
+              {pageData.map(({ name, url }, idx) => (
                 <li className={classes.menuLink}>
-                  <a>{item}</a>
+                  <NavLink to={url} key={idx}>
+                    {name}
+                  </NavLink>
                 </li>
               ))}
             </ul>

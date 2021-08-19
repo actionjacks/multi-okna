@@ -3,7 +3,7 @@ import styled from "styled-components";
 function OurBrands({ url }) {
   return (
     <BranContainer>
-      <BrandImg data-aos="zoom-out" src={url} alt="" />
+      <BrandImg loading="lazy" data-aos="zoom-out" src={url} alt="" />
     </BranContainer>
   );
 }

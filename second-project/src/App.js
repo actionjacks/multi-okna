@@ -20,8 +20,27 @@ function App({ classes }) {
   function getPageData() {
     fetch(`./page_content.json`)
       .then((res) => res.json())
-      .then(({ contacts, navbarNames, homeContent }) =>
-        setPageData({ contacts, navbarNames, homeContent })
+      .then(
+        ({
+          contacts,
+          navbarNames,
+          homeContent,
+          windowContent,
+          windowsCovers,
+          doors,
+          garageDoors,
+          contact,
+        }) =>
+          setPageData({
+            contacts,
+            navbarNames,
+            homeContent,
+            windowContent,
+            windowsCovers,
+            doors,
+            garageDoors,
+            contact,
+          })
       )
       .catch((err) =>
         setPageDataErr({
@@ -57,7 +76,7 @@ function App({ classes }) {
             contacts={pageData.contacts}
             pageData={pageData.navbarNames}
           />
-          <Routes data={pageData.homeContent} />
+          <Routes data={pageData} />
           <ScrollBtn />
           <Footer />
         </>
