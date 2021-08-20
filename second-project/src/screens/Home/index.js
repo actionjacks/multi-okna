@@ -59,6 +59,7 @@ function Home({ classes, data }) {
       {data && (
         <div className={classes.bottomHomeContainer}>
           <p className={classes.bottomParagraph}>{data[0].ourBrands}</p>
+          <span className={classes.span}></span>
           <div className={classes.ourBrandsContainer}>
             {brands.map((url, index) => (
               <OurBrands key={index} url={url} />
