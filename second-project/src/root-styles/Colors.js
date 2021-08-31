@@ -5,4 +5,5 @@ export default {
   mainWhite: "rgb(255,255,255)",
   mainBlue: "rgb(89,177,191)",
   secondBlue: "rgb(2,91,151)",
+  opacityBlue: "rgba(89,177,191,0.3)",
 };

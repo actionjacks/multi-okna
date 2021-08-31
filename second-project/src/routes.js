@@ -32,16 +32,6 @@ const BannerImgSrc = [
 function routes({ data }) {
   return (
     <Switch>
-      <Route exact path="/">
-        <>
-          <HomeBanner
-            title={data.homeContent[0].bannerSlogan}
-            imgSrc={BannerImgSrc[0]}
-          />
-          <Home data={data.homeContent} />
-        </>
-      </Route>
-
       <Route exact path="/okna">
         <>
           <WindowsBanner
@@ -58,7 +48,9 @@ function routes({ data }) {
             title={data.windowsCovers[0].bannerSlogan}
             imgSrc={BannerImgSrc[2]}
           />
-          <WindowsCovers data={data.windowContent} />
+          <WindowsCovers
+            description={data.windowsCovers[0].CoversDescription}
+          />
         </>
       </Route>
 
@@ -78,7 +70,7 @@ function routes({ data }) {
             title={data.garageDoors[0].bannerSlogan}
             imgSrc={BannerImgSrc[4]}
           />
-          <GarageDoors data={data.windowContent} />
+          <GarageDoors description={data.garageDoors[0].CoversDescription} />
         </>
       </Route>
 
@@ -89,6 +81,16 @@ function routes({ data }) {
             imgSrc={BannerImgSrc[5]}
           />
           <Contact data={data.windowContent} />
+        </>
+      </Route>
+
+      <Route path="/">
+        <>
+          <HomeBanner
+            title={data.homeContent[0].bannerSlogan}
+            imgSrc={BannerImgSrc[0]}
+          />
+          <Home data={data.homeContent} />
         </>
       </Route>
     </Switch>

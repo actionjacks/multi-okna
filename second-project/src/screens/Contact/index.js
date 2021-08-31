@@ -1,10 +1,12 @@
+import GoogleMap from "../../components/GoogleMap";
+
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/ContactStyles";
 
-function Contact() {
+function Contact({ classes }) {
   return (
-    <div>
-      <p></p>
+    <div className={classes.root}>
+      <GoogleMap />
     </div>
   );
 }

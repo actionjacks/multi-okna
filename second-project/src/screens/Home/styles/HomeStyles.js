@@ -57,11 +57,13 @@ export default {
     width: "100%",
   },
   middleHomeContainer: {
+    borderRight: `15px solid ${colors.opacityBlue}`,
     width: "100%",
     display: "flex",
     flexDirection: "row",
     textAlign: "center",
     padding: "3.5rem 5rem",
+    boxShadow: "rgba(50, 50, 54, 0.15) 0px 5px 15px 0px",
 
     [sizes.down("sm")]: {
       flexDirection: "column",
@@ -69,15 +71,21 @@ export default {
     },
   },
   contactParagraph: {
-    fontFamily: fonts.mainFont,
-    color: colors.secondDark,
+    fontFamily: fonts.secondFont,
+    color: colors.mainWhite,
     marginTop: "15px",
     fontSize: "1.2rem",
     textAlign: "left",
+    paddingLeft: "50%",
 
     [sizes.down("sm")]: {
       fontSize: "1rem",
+      paddingLeft: "0",
     },
+  },
+  contactParagraphSpan: {
+    backgroundColor: colors.mainBlue,
+    padding: "2px",
   },
   bottomHomeContainer: {
     display: "flex",
@@ -86,7 +94,8 @@ export default {
     alignItems: "center",
   },
   bottomParagraph: {
-    fontFamily: fonts.mainFont,
+    marginTop: "1.5rem",
+    fontFamily: fonts.secondFont,
     color: colors.mainDark,
     fontWeight: "400",
     fontSize: "2rem",
@@ -94,11 +103,6 @@ export default {
     [sizes.down("sm")]: {
       fontSize: "1.5rem",
     },
-  },
-  span: {
-    width: "100%",
-    height: "8px",
-    boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
   },
   ourBrandsContainer: {
     display: "flex",

@@ -1,7 +1,6 @@
 import React from "react";
 
 import OurBrands from "../../components/OurBrands/OurBrands";
-import MenuBtn from "../../components/MenuBtn";
 import { withStyles } from "@material-ui/core/styles";
 import styles from "./styles/HomeStyles";
 //import assets
@@ -27,46 +26,40 @@ const brands = [
 function Home({ classes, data }) {
   return (
     <main className={classes.root}>
-      {data && (
-        <>
-          <div className={classes.topHomeContainer}>
-            <div className={classes.leftSite} data-aos="flip-up">
-              <h2 className={classes.headerTitle}>{data[0].headerTitle}</h2>
-              <h3 className={classes.smallHeader}>{data[0].smallHeader}</h3>
-              <hr />
-              <p className={classes.description}>{data[0].description}</p>
-              <hr />
-            </div>
-            <div className={classes.rightSite} data-aos="flip-up">
-              <img
-                loading="lazy"
-                src={homeTopBanner}
-                alt=""
-                className={classes.homeTopBanner}
-              />
-            </div>
-          </div>
-        </>
-      )}
-      {data && (
-        <div className={classes.middleHomeContainer}>
-          <p className={classes.contactParagraph} data-aos="fade-left">
+      <div className={classes.topHomeContainer}>
+        <div className={classes.leftSite} data-aos="flip-up">
+          <h2 className={classes.headerTitle}>{data[0].headerTitle}</h2>
+          <h3 className={classes.smallHeader}>{data[0].smallHeader}</h3>
+          <hr />
+          <p className={classes.description}>{data[0].description}</p>
+          <hr />
+        </div>
+        <div className={classes.rightSite} data-aos="flip-up">
+          <img
+            loading="lazy"
+            src={homeTopBanner}
+            alt=""
+            className={classes.homeTopBanner}
+          />
+        </div>
+      </div>
+
+      <div className={classes.middleHomeContainer}>
+        <p className={classes.contactParagraph} data-aos="fade-left">
+          <span className={classes.contactParagraphSpan}>
             {data[0].contactParagraph}
-          </p>
-          <MenuBtn />
+          </span>
+        </p>
+      </div>
+
+      <div className={classes.bottomHomeContainer}>
+        <p className={classes.bottomParagraph}>{data[0].ourBrands}</p>
+        <div className={classes.ourBrandsContainer}>
+          {brands.map((url, index) => (
+            <OurBrands key={index} url={url} />
+          ))}
         </div>
-      )}
-      {data && (
-        <div className={classes.bottomHomeContainer}>
-          <p className={classes.bottomParagraph}>{data[0].ourBrands}</p>
-          <span className={classes.span}></span>
-          <div className={classes.ourBrandsContainer}>
-            {brands.map((url, index) => (
-              <OurBrands key={index} url={url} />
-            ))}
-          </div>
-        </div>
-      )}
+      </div>
     </main>
   );
 }

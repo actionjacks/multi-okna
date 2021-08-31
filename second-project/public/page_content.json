@@ -1,5 +1,5 @@
 {
-  "contacts": ["biuro@multi-okna.pl", "(+48) 607-473-123"],
+  "contacts": ["biuro@multi-okna.pl", "+48 607-473-123"],
   "navbarNames": [
     {
       "name": "Multi-okna",
@@ -32,6 +32,7 @@
       "headerTitle": "multi okna",
       "smallHeader": "Jesteśmy producentem stolarki okiennej i drzwiowej.",
       "description": "Dzięki temu, że montujemy okna i drzwi od podstaw, oferujemy naszym Klientom produkty stworzone na miarę ich oczekiwań i dostosowane do indywidualnych potrzeb.Funkcjonujemy na lokalnym rynku od 30 lat i współpracujemy tylko z najlepszymi dostawcami. Posiadamy również moskitiery okienne i drzwiowe, a także posiadamy bogatą ofertę parapetów wewnętrznych i zewnętrznych oraz drzwi zewnętrzne.",
+
       "contactParagraph": "Profesjonalizm i Indywidualne Podejście. Przedstaw nam swoje potrzeby, a my pomożemy dobrać odpowiednie produkty i zajmiemy się resztą.",
       "ourBrands": "Nasi partnerzy"
     }
@@ -63,14 +64,40 @@
       ]
     }
   ],
-  "windowsCovers": [{ "bannerSlogan": "rolety, żaluzje, moskitiery" }],
+  "windowsCovers": [
+    {
+      "bannerSlogan": "rolety, żaluzje, moskitiery",
+      "CoversDescription": [
+        "Żaluzje aluminiowe",
+        "Żaluzje aluminiowe",
+        "Moskitiery",
+        "Moskitiery",
+        "Rolety Dzień Noc",
+        "Rolety Dzień Noc",
+        "Żaluzje pionowe",
+        "Żaluzje pionowe",
+        "Żaluzje drewniane",
+        "Żaluzje drewniane"
+      ]
+    }
+  ],
   "doors": [
     {
       "bannerSlogan": "dzwi zewnętrzne, drzwi wewnętrzne",
       "doorDescription": "Idealne drzwi powinien charakteryzować niski współczynnik przenikania ciepła, wysoka klasa wodoszczelności i niepowtarzalny design. Drzwi MS ExternAL PREMIUM osiągają współczynnik przenikania ciepła na poziomie Ud= 0,61 W/m2K i klasę wodoszczelności 6A"
     }
   ],
-  "garageDoors": [{ "bannerSlogan": "bramy garażowe do twojego domu" }],
+  "garageDoors": [
+    {
+      "bannerSlogan": "bramy garażowe do twojego domu",
+      "CoversDescription": [
+        "Bramy garażowe segmentowe",
+        "Bramy przemysłowe",
+        "Bramy szybkobieżne",
+        "Bramy przeciwpożarowe"
+      ]
+    }
+  ],
   "contact": [
     {
       "bannerSlogan": "indywidualne podejście do każdej wyceny i realizacji projektu."
